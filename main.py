@@ -15,10 +15,19 @@ class CalculadoraMCD:
             a, b = b, a % b
         return a
 
+    def lcm(self):
+        """
+        Calcula el mínimo común múltiplo (MCM) de dos números utilizando el MCD.
+
+        Returns:
+        int: El mínimo común múltiplo de self.num1 y self.num2.
+        """
+        return (self.num1 * self.num2) // self.gcd()
+
 # Ejemplo de uso
 num1 = 48
 num2 = 18
 
 calculadora = CalculadoraMCD(num1, num2)
 print(f"El máximo común divisor de {num1} y {num2} es: {calculadora.gcd()}")
-k
+print(f"El mínimo común múltiplo de {num1} y {num2} es: {calculadora.lcm()}")
